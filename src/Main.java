@@ -8,7 +8,10 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        //String[] arg = {"rock", "paper", "scissors", "lizard", "spok"};
+        if (args.length%2 == 0 || args.length <= 1) {
+            System.out.println("Invalid parameter");
+            System.exit(0);
+        }
         HelpTable helpTable = new HelpTable();
         helpTable.helpTable(args);
         Scanner sc = new Scanner(System.in);
